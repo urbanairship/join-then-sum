@@ -1,8 +1,8 @@
 var join = require('join-by-keys')
 
-module.exports = combine_by_summation
+module.exports = joinByKeys
 
-function combine_by_summation(data, join_keys) {
+function joinByKeys(data, join_keys) {
   data = [].concat.apply([], data)
 
   var result
@@ -11,10 +11,10 @@ function combine_by_summation(data, join_keys) {
 
   result = join(data, join_keys)
 
-  for(var i = 0, len = result.length; i < len; ++i) {
+  for(var i = 0; i < result.length; ++i) {
     keys = Object.keys(result[i])
 
-    for(var j = 0, jen = keys.length; j < keys.length; ++j) {
+    for(var j = 0; j < keys.length; ++j) {
       if(join_keys.indexOf(keys[j]) > -1) {
         continue
       }
@@ -31,4 +31,3 @@ function combine_by_summation(data, join_keys) {
 
   return result
 }
-

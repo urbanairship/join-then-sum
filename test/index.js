@@ -9,29 +9,28 @@ tape('combines two arrays case', function(t) {
     , result
 
   events.push([{
-          'name': 'ay?'
-        , 'count': 100
-        , 'value': 1000
+      'name': 'ay?'
+    , 'count': 100
+    , 'value': 1000
   }])
 
   events.push([{
-          'name': 'ay?'
-        , 'count': 123
-        , 'value': 1234
+      'name': 'ay?'
+    , 'count': 123
+    , 'value': 1234
   }])
 
   result = combine(events, ['name'])
 
   expected = [{
-          'name': 'ay?'
-        , 'count': 223
-        , 'value': 2234
+      'name': 'ay?'
+    , 'count': 223
+    , 'value': 2234
   }]
 
   t.deepEqual(result, expected)
   t.end()
 })
-
 
 tape('works in the singular and empty case', function(t) {
   t.plan(8)
@@ -41,11 +40,11 @@ tape('works in the singular and empty case', function(t) {
     , result
 
   events.push([{
-          'name': 'where?'
-        , 'location': 'over there!'
-        , 'conversion': 'say what?'
-        , 'count': 1
-        , 'value': -1
+      'name': 'where?'
+    , 'location': 'over there!'
+    , 'conversion': 'say what?'
+    , 'count': 1
+    , 'value': -1
   }])
 
   result = combine(events, ['name'])
@@ -61,8 +60,6 @@ tape('works in the singular and empty case', function(t) {
       Object.keys(result[0])
     , ['name', 'location', 'conversion', 'count', 'value']
   )
-
-
 
   events.pop()
   result = combine(events, ['name'])
@@ -87,7 +84,6 @@ tape('not all arrays need have all items', function(t) {
   expected = []
   expected.push({i: 0, v: 8, l: 2})
   expected.push({i: 1, v: 0, l: 1})
-
 
   result = combine(events, ['i'])
 
