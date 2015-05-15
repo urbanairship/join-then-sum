@@ -2,6 +2,9 @@
 
 Join an array of objects on a key, then sum elements in the join.
 
+[![Build Status](http://img.shields.io/travis/urbanairship/join-then-sum/master.svg?style=flat)](https://travis-ci.org/urbanairship/join-then-sum)
+[![npm install](http://img.shields.io/npm/dm/join-then-sum.svg?style=flat)](https://www.npmjs.org/package/join-then-sum)
+
 ## Example
 
 ```javascript
