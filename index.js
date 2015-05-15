@@ -1,3 +1,6 @@
+/**
+ * Copyright 2015 Urban Airship and Contributors
+ */
 var join = require('join-by-keys')
 
 module.exports = joinByKeys
